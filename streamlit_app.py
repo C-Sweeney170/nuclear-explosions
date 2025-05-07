@@ -218,7 +218,7 @@ elif options == "Charts":
 
     #writing how many explosions there are for the given criteria
     if selected_country:
-        st.write(f"There are {len(filtered_data)} nuclear explosions for {" and ".join(selected_country)} between {year_range[0]} and {year_range[1]}.")
+        st.write(f"There are {len(filtered_data)} nuclear explosions for {' and '.join(selected_country)} between {year_range[0]} and {year_range[1]}.")
 
 
     #header for section
