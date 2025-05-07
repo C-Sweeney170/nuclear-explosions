@@ -149,12 +149,12 @@ if options =='Introduction':
 
     #sorting the data so the earliest date is first and outputting the info [DA2] Sort data in descending order by one column
     sorted_data = nuclear.sort_values(["Date"])[['WEAPON DEPLOYMENT LOCATION', 'Data.Name', 'Date', 'Yield Average']]
-    st.write(f"The earliest explosion was {nuclear["Data.Name"].iloc[0]} and it occurred on {nuclear["Date"].iloc[0]}.")
+    st.write(f"The earliest explosion was {nuclear['Data.Name'].iloc[0]} and it occurred on {nuclear['Date'].iloc[0]}.")
     st.write(sorted_data.head(1))
 
     #finding the largest average yield and the outputting info about it [DA3] Find top largest vales of a column
     largest = nuclear[nuclear["Yield Average"] == nuclear["Yield Average"].max()][['WEAPON DEPLOYMENT LOCATION', 'Data.Name', 'Date', 'Yield Average']]
-    st.write(f"The largest explosion was {largest.iloc[0]["Data.Name"]} and had an average yield of {largest.iloc[0]["Yield Average"]:.2f}  kilotons of TNT.")
+    st.write(f"The largest explosion was {largest.iloc[0]['Data.Name']} and had an average yield of {largest.iloc[0]['Yield Average']:.2f}  kilotons of TNT.")
     st.write(largest)
 
     #outputting info about most notable explosions [DA4] Filter data by one condition
